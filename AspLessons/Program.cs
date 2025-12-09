@@ -1,6 +1,8 @@
 using AspLessons;
+using AspLessons.Abstractions;
 using AspLessons.Api.Endpoints;
 using AspLessons.Helpers;
+using AspLessons.Models;
 using AspLessons.Services;
 using FluentValidation;
 using Hangfire;
@@ -14,8 +16,9 @@ using System.Reflection;
 using System.Text;
 
 
+//TODO: добавить провайдер, захидировать данные 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+builder.Services.AddValidatorsFromAssemblyContaining<Program>(ServiceLifetime.Scoped);
 builder.Services.AddSingleton<CheckHeaderMiddleWare>();
 builder.Services.AddRepositories();
 builder.Services.AddServices();
@@ -24,6 +27,7 @@ builder.Services.Configure<JsonOptions>(options =>
 {
     options.SerializerOptions.Converters.Add(new TimeOnlyJsonConverter());
 });
+builder.Logging.AddSeq( apiKey: builder.Configuration["SeqApiKey"]);
 builder.Services.AddEndpointsApiExplorer( );
 builder.Services.AddSwaggerGen( options =>
 {
@@ -75,6 +79,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
             Encoding.UTF8.GetBytes(builder.Configuration["AuthConfig:IssuerSignKey"]!))
     };
 });
+builder.Services.AddHttpLogging(options =>
+{
+    options.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;
+});
+builder.Services.AddHttpClient<IPhoneValidator, PhoneValidatorService>(options =>
+{
+    options.BaseAddress = new Uri("https://apilayer.net");
+});
+
 
 builder.Services.AddAuthorizationBuilder()
     .AddPolicy("client", policy => policy.RequireRole("client"))
@@ -86,10 +99,9 @@ builder.Services.AddHangfire(config =>
 });
 builder.Services.AddHangfireServer();
 builder.Services.AddScoped<GetRandomDiscountJob>();
+builder.Services.AddScoped<OpenNotificationJob>();
 builder.Services.Configure<JwtConfig>(builder.Configuration.GetSection("AuthConfig"));
-
-//TODO: добавить job, добавить httpClient(найти api, попробовать через Postman, на стронем сервере)
-
+builder.Services.Configure<PhoneValidatorConfig>(builder.Configuration.GetSection("PhoneValidatorConfig"));
 var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
@@ -114,7 +126,6 @@ workhoursGroup.MapWorkhours();
 
 var favorGroup = app.MapGroup("/favor").WithTags("Favor");
 favorGroup.MapFavor();
-
 var masterGroup = app.MapGroup("/master").WithTags("Master");
 masterGroup.MapMaster();
 
@@ -124,6 +135,10 @@ app.MapGet("/", async (context) =>
     await context.Response.SendFileAsync(Path.Combine("wwwroot", "pages", "main", "index.html"));
 });
 app.UseStaticFiles();
+app.UseHttpLogging();
 
 RecurringJob.AddOrUpdate<GetRandomDiscountJob>("RandomDiscount", job => job.SetRandomDicsount( ), Cron.Daily);
+RecurringJob.AddOrUpdate<OpenNotificationJob>("OpenNotification", job => job.Notificate( ), "0 9 * * *");
+
+
 app.Run();

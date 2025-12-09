@@ -14,11 +14,13 @@ namespace AspLessons.Services
             var allRegisters =  await  _registerRepository.GetAll();
             var allRegistersByDay = allRegisters.Where(register => register.RegisterDate.Date == DateTime.Now.Date ).ToList();
             Random rand = new Random();
-            var registerIndex = rand.Next(allRegistersByDay.Count-1);
-            if(registerIndex == -1)
+            var count = allRegistersByDay.Count;
+            if(count == 0)
             {
                 return;
             }
+            var registerIndex = rand.Next(count) - 1;
+            
             var randomRegister = allRegistersByDay[registerIndex];
             randomRegister.Discount = 10;
             await _registerRepository.SaveChangesAsync();

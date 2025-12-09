@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Онлайн запись</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="container">
+<!-- Тексты -->
+<p class="text1"> Ника</p>
+<p class="text2"> студия красоты</p>
+</div>
+
+
+<form id="registerform" class="container2" method="get">
+    <label for="name"> Ваше имя:</label>
+    <input type="text" required pattern="^[a-zа-яA-ZА-я0-9_]{2,}$" id="name" >
+    <label for="number">Телефон:</label>
+    <input type="tel" required pattern="^[0-9]{7,12}$" name="phone" id="phone" maxlength="21" >
+    <label for="number">Придумайте пароль:</label>
+    <input type="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" name="password" autocomplete="on" id="password" maxlength="21">
+    <label for="number">Повторите пароль:</label>
+    <input type="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" name="passwordrepaet" autocomplete="on" id="passwordrepeat" maxlength="21">
+    <div align="center" id="lineinfo"></div>
+    <button type="button" id="register">Зарегестрироваться</button>
+</form>  
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AspLessons</name>
+    </assembly>
+    <members>
+        <member name="T:AspLessons.Migrations.initial">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AspLessons.Migrations.addconstraint">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.addconstraint.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.addconstraint.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.addconstraint.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AspLessons.Migrations.add_discount">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.add_discount.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.add_discount.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.add_discount.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AspLessons.Migrations.change_date_settings">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.change_date_settings.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.change_date_settings.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.change_date_settings.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AspLessons.Migrations.change_date_settings_to_timestamp">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.change_date_settings_to_timestamp.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.change_date_settings_to_timestamp.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AspLessons.Migrations.change_date_settings_to_timestamp.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -1,19 +1,20 @@
-﻿using AspLessons.Contracts;
+﻿using AspLessons.Abstractions;
+using AspLessons.Contracts;
 using FluentValidation;
 namespace AspLessons.Helpers
 
 {
     public class UserValidation : AbstractValidator<CreateUserRequest>
     {
-        public UserValidation()
+        public UserValidation(IPhoneValidator phoneValidator)
         {
+
             RuleFor(user => user.Name)
                 .NotEmpty( )
                 .Matches("^[a-zа-яA-ZА-я0-9_]{2,}$")
                 .WithMessage("Incorrect name");
-            RuleFor(user => user.PhoneNumber)
-                .NotEmpty( )
-                .Matches(@"^[0-9]{7,12}$")
+            RuleFor(user => user.PhoneNumber).MustAsync(async (value, ctx) =>
+                (await phoneValidator.ValidatePhone(value)).Valid)
                 .WithMessage("Incorrect phone");
             RuleFor(user => user.Password)
                 .NotEmpty( )
