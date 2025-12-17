@@ -1,0 +1,134 @@
+Start installing Hangfire SQL objects...
+Hangfire SQL objects installed.
+Now listening on: https://localhost:7209
+Now listening on: http://localhost:5049
+Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: qwerty, Schema: hangfire'
+Using the following options for PostgreSQL job storage:
+    Queue poll interval: 00:00:15.
+    Invisibility timeout: 00:30:00.
+    Use sliding invisibility timeout: False.
+Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\artem\source\repos\AspLessons\AspLessons
+Server artem:44660:023878a3 successfully announced in 31,0037 ms
+Server artem:44660:023878a3 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+3 servers were removed due to timeout
+Removed 2 outdated record(s) from 'aggregatedcounter' table.
+Server artem:44660:023878a3 all the dispatchers started
+Removed 4 outdated record(s) from 'job' table.
+Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT r.id, r.discount, r.favor_id, r.master_id, r.register_date, r.user_id
+FROM registers AS r
+Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /user/auth
+Accept: */*
+Host: localhost:7209
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 62
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+RequestBody: {
+  "phoneNumber": "79053423022",
+  "password": "Qwerty123!"
+}
+You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+Executed DbCommand (16ms) [Parameters=[@__phoneNumber_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u0.id, u0.name, u0.password, u0.phone_number, u0.role, r.id, r.discount, r.favor_id, r.master_id, r.register_date, r.user_id
+FROM (
+    SELECT u.id, u.name, u.password, u.phone_number, u.role
+    FROM users AS u
+    WHERE u.phone_number = @__phoneNumber_0
+    LIMIT 1
+) AS u0
+LEFT JOIN registers AS r ON u0.id = r.user_id
+ORDER BY u0.id
+User with login 79053423022 logged in
+Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+ResponseBody: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJjbGllbnQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE1IiwiZXhwIjoxNzY1MzcwNjI3LCJpc3MiOiJuaWthLmNvbSIsImF1ZCI6Im5pa2FfdXNlciJ9.N_IorY9mAewBBGJ2mUpeThJzb40NxvpAj89XZWLOUbA"
+Duration: 1489.464ms
+Start installing Hangfire SQL objects...
+Hangfire SQL objects installed.
+Now listening on: https://localhost:7209
+Now listening on: http://localhost:5049
+Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: qwerty, Schema: hangfire'
+Using the following options for PostgreSQL job storage:
+    Queue poll interval: 00:00:15.
+    Invisibility timeout: 00:30:00.
+    Use sliding invisibility timeout: False.
+Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\artem\source\repos\AspLessons\AspLessons
+Server artem:19792:8286f820 successfully announced in 25,3518 ms
+Server artem:19792:8286f820 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+1 servers were removed due to timeout
+Server artem:19792:8286f820 all the dispatchers started
+Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /user/auth
+Accept: */*
+Host: localhost:7209
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 62
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+RequestBody: {
+  "phoneNumber": "79603030460",
+  "password": "Qwerty123!"
+}
+You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+Executed DbCommand (13ms) [Parameters=[@__phoneNumber_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u0.id, u0.name, u0.password, u0.phone_number, u0.role, r.id, r.discount, r.favor_id, r.master_id, r.register_date, r.user_id
+FROM (
+    SELECT u.id, u.name, u.password, u.phone_number, u.role
+    FROM users AS u
+    WHERE u.phone_number = @__phoneNumber_0
+    LIMIT 1
+) AS u0
+LEFT JOIN registers AS r ON u0.id = r.user_id
+ORDER BY u0.id
+User with phone number xxxxxxx0460 want to log in but this phone wasn't registred
+User with phone number 79603030460 want to log in but this phone wasn't registred
+Response:
+StatusCode: 404
+Duration: 1836.5791ms

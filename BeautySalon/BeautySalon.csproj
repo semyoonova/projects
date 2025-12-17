@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+	
+	<ItemGroup>
+		<None Update="wwwroot\pages\**\**\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <None Include="wwwroot\pages\adminpanel\index.html" />
+	  <None Include="wwwroot\pages\adminpanel\script.js" />
+	  <None Include="wwwroot\pages\adminpanel\styles.css" />
+	  <None Include="wwwroot\pages\authorization\index.html" />
+	  <None Include="wwwroot\pages\authorization\script.js" />
+	  <None Include="wwwroot\pages\authorization\styles.css" />
+	  <None Include="wwwroot\pages\datetime\index.html" />
+	  <None Include="wwwroot\pages\datetime\script.js" />
+	  <None Include="wwwroot\pages\datetime\styles.css" />
+	  <None Include="wwwroot\pages\error\index.html" />
+	  <None Include="wwwroot\pages\error\script.js" />
+	  <None Include="wwwroot\pages\error\styles.css" />
+	  <None Include="wwwroot\pages\main\girl.png" />
+	  <None Include="wwwroot\pages\main\index.html" />
+	  <None Include="wwwroot\pages\main\script.js" />
+	  <None Include="wwwroot\pages\main\styles.css" />
+	  <None Include="wwwroot\pages\masters\index.html" />
+	  <None Include="wwwroot\pages\masters\script.js" />
+	  <None Include="wwwroot\pages\masters\styles.css" />
+	  <None Include="wwwroot\pages\registration\index.html" />
+	  <None Include="wwwroot\pages\registration\script.js" />
+	  <None Include="wwwroot\pages\registration\styles.css" />
+	  <None Include="wwwroot\pages\services\index.html" />
+	  <None Include="wwwroot\pages\services\script.js" />
+	  <None Include="wwwroot\pages\services\styles.css" />
+	  <None Include="wwwroot\pages\success\index.html" />
+	  <None Include="wwwroot\pages\success\script.js" />
+	  <None Include="wwwroot\pages\success\styles.css" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="15.1.0" />
+	  <PackageReference Include="EFCore.NamingConventions" Version="9.0.0" />
+	  <PackageReference Include="FluentValidation" Version="12.1.0" />
+	  <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
+	  <PackageReference Include="Hangfire.AspNetCore" Version="1.8.22" />
+	  <PackageReference Include="Hangfire.Core" Version="1.8.22" />
+	  <PackageReference Include="Hangfire.PostgreSql" Version="1.20.12" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.11" />
+	  <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.11">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="NLog" Version="6.0.7" />
+	  <PackageReference Include="NLog.Extensions.Logging" Version="6.1.0" />
+	  <PackageReference Include="NLog.Targets.Seq" Version="4.0.2" />
+	  <PackageReference Include="NLog.Web.AspNetCore" Version="6.1.0" />
+	  <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+	  <PackageReference Include="Seq.Api" Version="2025.2.2" />
+	  <PackageReference Include="Seq.Extensions.Logging" Version="9.0.0" />
+	  <PackageReference Include="Serilog.Sinks.Seq" Version="9.0.0" />
+	  <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.6" />
+	  <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.6" />
+	  <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.6" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <None Update="NlogConfig.xml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,30 @@
+﻿
+
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      autoReload="true"
+      throwConfigExceptions="true"
+	  internalLogLevel="Warn"
+	  internalLogFile="nlog-internal.log">
+	
+	<!-- подключаем расширение для Seq -->
+	<!-- LKoQ2Rrj4HR1BCiImKQd-->
+	<extensions>
+		<add assembly="NLog.Targets.Seq" />
+	</extensions>
+	<targets>
+		<target xsi:type="File"
+				name="logfile"
+				fileName="logs/${shortdate}.log"
+				layout="${longdate}|${level:uppercase=true}|${logger}|${message}" />
+		<target xsi:type="Seq"
+            name="seq"
+            serverUrl="${configsetting:name=Seq.Url}"
+            apiKey="${configsetting:name=Seq.ApiKey}" 
+			 />
+	</targets>
+
+	<rules>
+		<logger name="*" minlevel="Info" writeTo="logfile,seq" />
+	</rules>
+</nlog>
