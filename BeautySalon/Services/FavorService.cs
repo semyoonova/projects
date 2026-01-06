@@ -1,11 +1,11 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Helpers;
-using AspLessons.Models;
-using AspLessons.Repositories;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Helpers;
+using BeautySalon.Models;
+using BeautySalon.Repositories;
 using AutoMapper;
 using Microsoft.Win32;
 
-namespace AspLessons.Services
+namespace BeautySalon.Services
 {
     public class FavorService(IFavorRepository favorRepository, IMapper mapper,
         ILogger<FavorService> logger) : IFavorService

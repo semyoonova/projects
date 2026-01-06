@@ -1,6 +1,6 @@
-﻿using AspLessons.Abstractions;
+﻿using BeautySalon.Abstractions;
 
-namespace AspLessons.Services
+namespace BeautySalon.Services
 {
     public class GetRandomDiscountJob 
     {

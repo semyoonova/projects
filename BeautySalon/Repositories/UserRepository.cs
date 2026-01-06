@@ -1,8 +1,8 @@
-﻿using AspLessons.Abstractions;
+﻿using BeautySalon.Abstractions;
 using Microsoft.Win32;
 using System.Diagnostics.Metrics;
 
-namespace AspLessons.Repositories
+namespace BeautySalon.Repositories
 {
     public class UserRepository : IUserRepository
     {

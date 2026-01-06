@@ -1,4 +1,4 @@
-﻿namespace AspLessons.Contracts
+﻿namespace BeautySalon.Contracts
 {
     public class GetFavorsByMasterRequest
     {

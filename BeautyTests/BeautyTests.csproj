@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspLessons\BeautySalon.csproj" />
+    <ProjectReference Include="..\BeautySalon\BeautySalon.csproj" />
   </ItemGroup>
 
   <ItemGroup>

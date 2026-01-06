@@ -1,8 +1,8 @@
-﻿using AspLessons.Contracts;
-using AspLessons.Models;
+﻿using BeautySalon.Contracts;
+using BeautySalon.Models;
 using AutoMapper;
 
-namespace AspLessons.Configuration
+namespace BeautySalon.Configuration
 {
     public class FavorMapperProfile : Profile
     {

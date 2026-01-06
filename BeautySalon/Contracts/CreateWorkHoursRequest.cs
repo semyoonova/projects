@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace AspLessons.Contracts
+namespace BeautySalon.Contracts
 {
     public class CreateWorkHoursRequest
     {

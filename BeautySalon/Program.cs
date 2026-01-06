@@ -1,9 +1,9 @@
-using AspLessons;
-using AspLessons.Abstractions;
-using AspLessons.Api.Endpoints;
-using AspLessons.Helpers;
-using AspLessons.Models;
-using AspLessons.Services;
+using BeautySalon;
+using BeautySalon.Abstractions;
+using BeautySalon.Api.Endpoints;
+using BeautySalon.Helpers;
+using BeautySalon.Models;
+using BeautySalon.Services;
 using FluentValidation;
 using Hangfire;
 using Hangfire.PostgreSql;
@@ -15,6 +15,7 @@ using Microsoft.OpenApi.Models;
 using NLog;
 using NLog.Extensions.Logging;
 using NLog.Web;
+using System.Net;
 using System.Reflection;
 using System.Text;
 

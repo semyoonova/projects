@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace AspLessons.Migrations
+namespace BeautySalon.Migrations
 {
     /// <inheritdoc />
     public partial class add_discount : Migration

@@ -1,6 +1,6 @@
-﻿using AspLessons.Models;
+﻿using BeautySalon.Models;
 
-namespace AspLessons.Contracts
+namespace BeautySalon.Contracts
 {
     public class MastersResponse
     {

@@ -1,10 +1,10 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Helpers;
-using AspLessons.Models;
-using AspLessons.Repositories;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Helpers;
+using BeautySalon.Models;
+using BeautySalon.Repositories;
 using AutoMapper;
 
-namespace AspLessons.Services
+namespace BeautySalon.Services
 {
     public class MasterService(IMasterRepository masterRepository, IWorkHoursService workHoursService,
         IFavorService favorService, IMapper mapper, ILogger<MasterService> logger) : IMasterService

@@ -1,6 +1,6 @@
-﻿using AspLessons.Helpers;
+﻿using BeautySalon.Helpers;
 using Microsoft.EntityFrameworkCore;
-namespace AspLessons
+namespace BeautySalon
 {
     
 

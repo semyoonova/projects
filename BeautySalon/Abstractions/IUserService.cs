@@ -1,7 +1,7 @@
-﻿using AspLessons.Models;
+﻿using BeautySalon.Models;
 using AutoMapper;
 
-namespace AspLessons.Abstractions
+namespace BeautySalon.Abstractions
 {
     public interface IUserService
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace AspLessons.Services
+namespace BeautySalon.Services
 {
     public class OpenNotificationJob
     {

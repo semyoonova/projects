@@ -1,6 +1,6 @@
 ﻿
 
-namespace AspLessons
+namespace BeautySalon
 {
     public class WorkHours
     {

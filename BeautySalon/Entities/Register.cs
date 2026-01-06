@@ -1,4 +1,4 @@
-﻿namespace AspLessons
+﻿namespace BeautySalon
 {
     public class Register
     {

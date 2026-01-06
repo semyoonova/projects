@@ -1,8 +1,8 @@
-﻿using AspLessons;
-using AspLessons.Abstractions;
-using AspLessons.Models;
-using AspLessons.Repositories;
-using AspLessons.Services;
+﻿using BeautySalon;
+using BeautySalon.Abstractions;
+using BeautySalon.Models;
+using BeautySalon.Repositories;
+using BeautySalon.Services;
 using AutoMapper;
 using Moq;
 using System;

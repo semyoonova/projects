@@ -1,9 +1,9 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Contracts;
-using AspLessons.Models;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Contracts;
+using BeautySalon.Models;
 using AutoMapper;
 
-namespace AspLessons.Api.Endpoints
+namespace BeautySalon.Api.Endpoints
 {
     public static class WorkhoursEndpoint
     {

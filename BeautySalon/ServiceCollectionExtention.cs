@@ -1,15 +1,15 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Configuration;
-using AspLessons.Helpers;
-using AspLessons.Repositories;
-using AspLessons.Services;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Configuration;
+using BeautySalon.Helpers;
+using BeautySalon.Repositories;
+using BeautySalon.Services;
 using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 
-namespace AspLessons
+namespace BeautySalon
 {
     public static class ServiceCollectionExtention
     {

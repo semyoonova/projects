@@ -1,7 +1,7 @@
-﻿using AspLessons.Models;
-using AspLessons.Repositories;
+﻿using BeautySalon.Models;
+using BeautySalon.Repositories;
 
-namespace AspLessons.Abstractions
+namespace BeautySalon.Abstractions
 {
     public interface IMasterService
     {

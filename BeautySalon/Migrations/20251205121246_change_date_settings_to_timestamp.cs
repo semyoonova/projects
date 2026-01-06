@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace AspLessons.Migrations
+namespace BeautySalon.Migrations
 {
     /// <inheritdoc />
     public partial class change_date_settings_to_timestamp : Migration

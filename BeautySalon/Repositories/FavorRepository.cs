@@ -1,6 +1,6 @@
-﻿using AspLessons.Abstractions;
+﻿using BeautySalon.Abstractions;
 
-namespace AspLessons.Repositories
+namespace BeautySalon.Repositories
 {
     public class FavorRepository : IFavorRepository
     {

@@ -1,11 +1,11 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Helpers;
-using AspLessons.Models;
-using AspLessons.Repositories;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Helpers;
+using BeautySalon.Models;
+using BeautySalon.Repositories;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore.Internal;
 
-namespace AspLessons.Services
+namespace BeautySalon.Services
 {
     public class RegisterService(IMasterService masterService, IRegisterRepository registerRepository,
         IMapper mapper) : IRegisterService

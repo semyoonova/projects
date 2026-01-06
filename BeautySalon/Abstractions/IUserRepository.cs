@@ -1,4 +1,4 @@
-﻿namespace AspLessons.Abstractions
+﻿namespace BeautySalon.Abstractions
 {
     public interface IUserRepository : IRepository<User>
     {

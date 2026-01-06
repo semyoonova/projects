@@ -1,5 +1,5 @@
 ﻿
-namespace AspLessons
+namespace BeautySalon
 {
     public class CheckHeaderMiddleWare : IMiddleware
     {

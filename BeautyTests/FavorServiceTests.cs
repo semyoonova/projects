@@ -1,8 +1,10 @@
-﻿using AspLessons;
-using AspLessons.Abstractions;
-using AspLessons.Services;
+﻿using BeautySalon;
+using BeautySalon.Abstractions;
+using BeautySalon.Services;
 using AutoMapper;
 using Moq;
+using Castle.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 namespace BeautyTests
 {
@@ -10,11 +12,13 @@ namespace BeautyTests
     {
         private Mock<IFavorRepository> _mockFavorRepository;
         private Mock<IMapper> _mockMapper;
+        private Mock<ILogger<FavorService>> _mockLogger;
 
         public FavorServiceTests()
         {
             _mockFavorRepository = new Mock<IFavorRepository>();
             _mockMapper = new Mock<IMapper>();
+            _mockLogger = new Mock<ILogger<FavorService>>();
         }
         [Fact]
         public async Task SendNegativePriceShouldBeNoneNegative()
@@ -22,7 +26,7 @@ namespace BeautyTests
             int favorId = 1;
             int newPrice = -1000;
 
-            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object);
+            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object, _mockLogger.Object );
 
             await Assert.ThrowsAsync<Exception>(async () => await favorService.ChangeFavorPrice(favorId, newPrice));
         }
@@ -36,7 +40,7 @@ namespace BeautyTests
             _mockFavorRepository.Setup(repo => repo.GetById(favorId))
                 .ReturnsAsync((Favor)null);
 
-            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object);
+            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object, _mockLogger.Object);
             await Assert.ThrowsAsync<Exception>(async () => await favorService.ChangeFavorPrice(favorId, newPrice));
         }
 
@@ -55,7 +59,7 @@ namespace BeautyTests
 
             _mockFavorRepository.Setup(repo => repo.GetById(favorId))
                .ReturnsAsync(favor);
-            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object);
+            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object, _mockLogger.Object);
             Favor favorResult = await favorService.ChangeFavorPrice(favorId, newPrice);
             Assert.Equal(newPrice, favorResult.Price);
             Assert.Equal(favorId, favorResult.Id);
@@ -68,7 +72,7 @@ namespace BeautyTests
 
             _mockFavorRepository.Setup(repo => repo.GetById(favorId))
                 .ReturnsAsync((Favor)null);
-            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object);
+            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object, _mockLogger.Object);
             await Assert.ThrowsAsync<Exception>(async () => await favorService.FindFavorById(favorId));
         }
 
@@ -79,7 +83,7 @@ namespace BeautyTests
 
             _mockFavorRepository.Setup(repo => repo.GetById(favorId))
                 .ReturnsAsync((Favor)null);
-            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object);
+            IFavorService favorService = new FavorService(_mockFavorRepository.Object, _mockMapper.Object, _mockLogger.Object);
             await Assert.ThrowsAsync<Exception>(async () => await favorService.RemoveFavor(favorId));
         }
 

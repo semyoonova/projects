@@ -1,9 +1,9 @@
-﻿using AspLessons.Contracts;
-using AspLessons.Models;
+﻿using BeautySalon.Contracts;
+using BeautySalon.Models;
 using AutoMapper;
 using System.Diagnostics.Metrics;
 
-namespace AspLessons.Configuration
+namespace BeautySalon.Configuration
 {
     public class RegisterMapperProfile : Profile 
     {

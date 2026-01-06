@@ -1,4 +1,4 @@
-﻿namespace AspLessons.Helpers
+﻿namespace BeautySalon.Helpers
 {
     public class GlobalExceptionMiddleware : IMiddleware
     {

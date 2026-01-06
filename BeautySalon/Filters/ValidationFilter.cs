@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using System.Net;
 
-namespace AspLessons.Filters
+namespace BeautySalon.Filters
 {
     public class ValidationFilter<T>: IEndpointFilter
     {

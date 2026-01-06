@@ -1,10 +1,10 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Models;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Models;
 using Microsoft.Extensions.Options;
 using System.Net.Http;
 using System.Text.Json;
 
-namespace AspLessons.Services
+namespace BeautySalon.Services
 {
     public class PhoneValidatorService(HttpClient httpClient, 
         IOptionsMonitor<PhoneValidatorConfig> configOptions) : IPhoneValidator

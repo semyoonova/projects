@@ -1,10 +1,10 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Helpers;
-using AspLessons.Models;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Helpers;
+using BeautySalon.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 
-namespace AspLessons.Services
+namespace BeautySalon.Services
 {
     public class UserService(IMasterService masterService, IRegisterService registerService, IFavorService favorService,
         IMapper mapper, IUserRepository userRepository, IJwtTokenGenerator jwtTokenGenerator,

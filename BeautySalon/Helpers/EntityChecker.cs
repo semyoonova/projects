@@ -1,6 +1,6 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace AspLessons.Helpers
+namespace BeautySalon.Helpers
 {
     public static class EntityChecker 
     {

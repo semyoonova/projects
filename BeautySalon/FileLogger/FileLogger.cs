@@ -1,4 +1,4 @@
-﻿namespace AspLessons.FileLogger
+﻿namespace BeautySalon.FileLogger
 {
     public class FileLogger(string filePath) : ILogger, IDisposable
     {

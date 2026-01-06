@@ -1,13 +1,13 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Contracts;
-using AspLessons.Filters;
-using AspLessons.Models;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Contracts;
+using BeautySalon.Filters;
+using BeautySalon.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 
-namespace AspLessons.Api.Endpoints
+namespace BeautySalon.Api.Endpoints
 {
     public static class UserEndpoint
     {

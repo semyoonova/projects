@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace AspLessons.Helpers
+namespace BeautySalon.Helpers
 {
     public class TimeOnlyJsonConverter : JsonConverter<TimeOnly>
     {

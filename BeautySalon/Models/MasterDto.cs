@@ -1,4 +1,4 @@
-﻿namespace AspLessons.Models
+﻿namespace BeautySalon.Models
 {
     public class MasterDto
     {

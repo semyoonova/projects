@@ -1,7 +1,7 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Contracts;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Contracts;
 using FluentValidation;
-namespace AspLessons.Helpers
+namespace BeautySalon.Helpers
 
 {
     public class UserValidation : AbstractValidator<CreateUserRequest>

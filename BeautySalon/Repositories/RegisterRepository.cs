@@ -1,7 +1,7 @@
-﻿using AspLessons.Abstractions;
+﻿using BeautySalon.Abstractions;
 using System.Diagnostics.Metrics;
 
-namespace AspLessons.Repositories
+namespace BeautySalon.Repositories
 {
     public class RegisterRepository : IRegisterRepository
     {

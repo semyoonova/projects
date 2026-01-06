@@ -14,7 +14,7 @@ Using the following options for Hangfire Server:
     Schedule polling interval: 00:00:15
 Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
-Content root path: C:\Users\artem\source\repos\AspLessons\AspLessons
+Content root path: C:\Users\artem\source\repos\BeautySalon\BeautySalon
 Server artem:44660:023878a3 successfully announced in 31,0037 ms
 Server artem:44660:023878a3 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
 3 servers were removed due to timeout
@@ -84,7 +84,7 @@ Using the following options for Hangfire Server:
     Schedule polling interval: 00:00:15
 Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
-Content root path: C:\Users\artem\source\repos\AspLessons\AspLessons
+Content root path: C:\Users\artem\source\repos\BeautySalon\BeautySalon
 Server artem:19792:8286f820 successfully announced in 25,3518 ms
 Server artem:19792:8286f820 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
 1 servers were removed due to timeout

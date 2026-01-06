@@ -1,6 +1,6 @@
-﻿using AspLessons.Models;
+﻿using BeautySalon.Models;
 
-namespace AspLessons.Abstractions
+namespace BeautySalon.Abstractions
 {
     public interface IRegisterService
     {

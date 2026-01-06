@@ -1,7 +1,7 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Models;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Models;
 
-namespace AspLessons.Repositories
+namespace BeautySalon.Repositories
 {
     public class WorkHoursRepository : IWorkHoursRepository
     {

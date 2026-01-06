@@ -1,10 +1,10 @@
-﻿using AspLessons.Abstractions;
-using AspLessons.Contracts;
-using AspLessons.Models;
-using AspLessons.Services;
+﻿using BeautySalon.Abstractions;
+using BeautySalon.Contracts;
+using BeautySalon.Models;
+using BeautySalon.Services;
 using AutoMapper;
 
-namespace AspLessons.Api.Endpoints
+namespace BeautySalon.Api.Endpoints
 {
     public static class MasterEndpoint
     {

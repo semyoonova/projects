@@ -1,7 +1,7 @@
-﻿using AspLessons.Abstractions;
+﻿using BeautySalon.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
-namespace AspLessons.Repositories
+namespace BeautySalon.Repositories
 {
     
     public class UserRepositoryEF : IUserRepository
